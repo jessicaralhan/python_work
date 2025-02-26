@@ -11,3 +11,16 @@ async def main():
     await task 
 
 asyncio.run(main())
+
+import ayncio 
+
+
+async def async_task():
+    print("task")
+    await asyncio.sleep(1)
+    print("finish")
+
+async def main():
+    task = asyncio.create_task(async_task)
+    await task
+asyncio.run(main())
